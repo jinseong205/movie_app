@@ -1,14 +1,22 @@
 import React from 'react';
 
 function App() {
-  return <div className="App">
-    <h1>hello!</h1>
-    <Potato />
-  </div>;
+  return (
+    <div className="App">
+      <h1>hello!</h1>
+
+      <Food fav="kimchi" />
+      <Food fav="ramen" />
+      <Food fav="samgiopsal" />
+      <Food fav="chukumi" />
+
+
+    </div>
+  );
 }
 
-function Potato(){
-  return <h1>I like potato!</h1>
+function Food(props) {
+  return <h1>I like {props.fav}</h1>
 }
 
 export default App;
