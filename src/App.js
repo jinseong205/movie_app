@@ -3,11 +3,11 @@ import React from 'react';
 
 //data from server
 const foodLike = [
-  { name: 'kimchi', image: 'image' },
-  { name: 'samgyeopsal', image: 'image' },
-  { name: 'bibimbap', image: 'image' },
-  { name: 'doncasu', image: 'image' },
-  { name: 'Kimbap', image: 'image' }
+  { id : 1, name : 'kimchi', image : 'image' },
+  { id : 2, name : 'samgyeopsal', image : 'image' },
+  { id : 3, name : 'bibimbap', image : 'image' },
+  { id : 4, name : 'doncasu', image : 'image' },
+  { id : 5, name : 'Kimbap', image : 'image' }
 
 ];
 
@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       {foodLike.map(dish =>(
-        <Food name = {dish.name} picture = {dish.image}/>
+        <Food key = {dish.key} name = {dish.name} picture = {dish.image}/>
       ))}
     </div>
   );
